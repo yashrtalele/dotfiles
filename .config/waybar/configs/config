@@ -1,0 +1,212 @@
+{
+  "include": "~/.config/waybar/configs/custom_modules/modules",
+  "layer": "top",
+  "height": 22,
+  "gtk-layer-shell": true,
+  "exclusive": true,
+  "passtrough": false,
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-bottom": 0,
+  "margin-right": 0,
+  "spacing": 0,
+  "modules-left": [
+    "custom/weather",
+    "custom/launcher",
+    "wlr/workspaces",
+    "custom/arrow-dec",
+    "custom/app-title-icon",
+    "custom/app-name",
+    "custom/media"
+  ],
+  "modules-center": [
+    "custom/left",
+    "custom/priv-cam",
+    "custom/priv-speaker",
+    "custom/priv-mic",
+    "custom/right"
+  ],
+  "modules-right": [
+    "tray",
+    "custom/dot-alt",
+    "memory",
+    "custom/dot",
+    "network",
+    "custom/left-arrw",
+    "battery",
+    "battery#text",
+    "custom/pacman-update",
+    "custom/pacman-update#text",
+    "pulseaudio",
+    "pulseaudio#text",
+    "backlight",
+    "backlight#text",
+    "custom/dot-alt",
+    "clock",
+    "custom/power"
+  ],
+  "wlr/workspaces": {
+    "all-outputs": false,
+    "active-only": "false",
+    "on-click": "activate",
+    "format": "{icon}",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    /* "format-icons": {
+      "1": "󪤍",
+      "2": "󪤕",
+      "3": "󪥌",
+      "4": "󪥅",
+      "5": "󪤄",
+      "6": "󪤋",
+      "7": "󪤝",
+      "8": "󪤏",
+      "urgent": "󪤳",
+      "default": "󪤾"
+    } */
+    
+    "format-icons": {
+      "2": "",
+      "3": "",
+      "4": "",
+      "urgent": "",
+      // "active": "",
+      "default": ""
+    },
+  },
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 50
+  },
+  "tray": {
+    "icon-size": 13,
+    "spacing": 10,
+    "tooltip": false,
+  },
+  "clock": {
+    "format": "<b>{:%I:%M %p}</b>",
+    "format-alt": "<b>{:%a.%d,%b}</b>",
+    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "cpu": {
+    "interval": 10,
+    "format": "󪤔 {}%",
+    "max-length": 10,
+    "on-click": "",
+    "tooltip": false
+  },
+  "memory": {
+    "interval": 30,
+    "format": "󪤲 {used}G",
+    "format-alt": " {used:0.1f}G",
+    "max-length": 10
+  },
+  "network": {
+    "format-wifi": "󪥈 {essid}",
+    "format-ethernet": "󪥈 wired",
+    "tooltip": false,
+    "on-click": "bash ~/.config/waybar/scripts/rofi-wifi-menu.sh",
+    "format-disconnected": "Disconnected "
+  },
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-bluetooth": " ",
+    "format-bluetooth-muted": " ",
+    "tooltip": false,
+    "format-muted": "󯤰",
+    "format-icons": {
+      "headphone": "󪥆",
+      "hands-free": "󪤥",
+      "headset": "󪥆",
+      "phone": "󪤥",
+      "portable": "",
+      "car": "",
+      "default": [
+        "󪤦",
+        "󪤦",
+        "󪤒"
+      ]
+    },
+    "on-click": "pavucontrol"
+  },
+  "pulseaudio#text": {
+    "tooltip": false,
+    "format": "<b>{volume}</b>",
+    "format-bluetooth": "{volume}"
+  },
+  "custom/weather": {
+    "exec": "python3 ~/.config/waybar/scripts/weather.py",
+    "restart-interval": 300,
+    "return-type": "json",
+    "on-click": "xdg-open https://www.accuweather.com/"
+  },
+  "battery": {
+    "bat": "BAT1",
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}",
+    "format-icons": [
+      "󪥖",
+      "󪥝",
+      "󪥞",
+      "󪥞",
+      "󪥟"
+    ],
+    "max-length": 25,
+    "tooltip": false
+  },
+  "battery#text": {
+    "bat": "BAT1",
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "<b>{capacity}</b>",
+    "max-length": 25,
+    "tooltip": false
+  },
+  "backlight": {
+    "device": "DP-1",
+    "format": "{icon}",
+    "tooltip": false,
+    "format-icons": [
+      "󪤪",
+      "󪤪",
+      "󪤪",
+      "󪤪",
+      "󪤪",
+      "󪤪",
+      "󪤪",
+      "󪤪",
+      "󪤪"
+    ],
+    "on-click": ""
+  },
+  "backlight#text": {
+    "device": "DP-1",
+    "format": "{percent}",
+    "interval": 15,
+    "exec": "",
+    "tooltip": false
+  },
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "exec ~/.config/waybar/scripts/power-menu.sh",
+    "tooltip": false
+  },
+  "custom/media": {
+    "format": "{icon} {}",
+    "return-type": "json",
+    "max-length": 20,
+    "format-icons": {
+      "spotify": "",
+      "default": "󰗃"
+    },
+    "escape": true,
+    "exec": "/usr/bin/python3 $HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources folder
+  }
+}
