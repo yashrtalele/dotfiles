@@ -113,7 +113,7 @@
     "format-bluetooth": " ",
     "format-bluetooth-muted": " ",
     "tooltip": false,
-    "format-muted": "󯤰",
+    "format-muted": "ﳌ",
     "format-icons": {
       "headphone": "󪥆",
       "hands-free": "󪤥",
