@@ -135,10 +135,12 @@
     "format-bluetooth": "{volume}"
   },
   "custom/weather": {
-    "exec": "python3 ~/.config/waybar/scripts/weather.py",
+    /* "exec": "python3 ~/.config/waybar/scripts/weather.py", */
+    "exec": "python ~/.config/waybar/scripts/weather-custom.py",
     "restart-interval": 300,
     "return-type": "json",
-    "on-click": "xdg-open https://www.accuweather.com/"
+    "on-click": "xdg-open https://weather.com/en-IN/weather/today/l/0f79acb4f5fb9d991a25d1461974431d3d71215b5a28b30cb99b9f8962643cbc"
+    /* "on-click": "xdg-open https://www.accuweather.com/" */
   },
   "battery": {
     "bat": "BAT1",
