@@ -228,7 +228,7 @@ sudo cp wofi-emoji /usr/bin/
 cd ~/git-clones/local/
 mkdir yashtalele
 cd yashtalele
-git clone --recursive https://github.com/yashrtalele97/dotfiles
+git clone --recursive https://github.com/yashrtalele/dotfiles
 ```
 * **Manually copy the files to the .config folder**
 
