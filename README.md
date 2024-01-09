@@ -198,7 +198,7 @@ chmod +x RiceInstaller
 
 * **Installing required packages**
 ```sh
-yay -S make wlroots wayland-protocols pkgconf ninja patch catch2 waybar-hyprland-git brightnessctl pulseaudio-ctl grim slurp hyprland-nvidia alsa-utils wofi kitty alacritty nemo ranger mako neofetch nitch btop viewnior swaybg swayidle swaylock-effects waylogout-git swww zoxide cliphist wtype wl-clipboard xdg-desktop-portal-wlr polkit-gnome mtpfs jmtpfs gvfs-mtp gvfs-gphoto2 powertop tlp qt5-wayland qt6-wayland imagemagick
+yay -S make wlroots wayland-protocols pkgconf ninja patch catch2 waybar-hyprland-git brightnessctl pulseaudio-ctl grim slurp hyprland-git alsa-utils wofi kitty alacritty nemo ranger mako neofetch nitch btop viewnior swaybg swayidle swaylock-effects waylogout-git swww zoxide cliphist wtype wl-clipboard xdg-desktop-portal-wlr polkit-gnome mtpfs jmtpfs gvfs-mtp gvfs-gphoto2 powertop tlp qt5-wayland qt6-wayland imagemagick ani-cli manga-cli-git python-pyquery python-neovim stylua-bin wget lazygit fd clang github-desktop-bin discord betterdiscord tofi ttf-cascadia-code-nerd swaylock-effects-git mpv protonvpn-cli visual-studio-code-bin 
 ```
 
 * **Theming**
@@ -220,6 +220,16 @@ cd ~/git-clones/local/cybergaz
 git clone https://github.com/cybergaz/scripts.git
 cd scripts/wofi-emoji
 sudo cp wofi-emoji /usr/bin/
+```
+
+### Git ssh setup
+```sh
+ssh-keygen -t rsa -b 4096 -C "yashrtalele@gmail.com"
+git config --global user.email "yashrtalele@gmail.com"
+git config --global user.name "Yash"
+eval "$(ssh-agent -s)"
+ssh-add .ssh/id_rsa
+cat ~/.ssh/id_rsa.pub
 ```
 
 * **Cloning the repository**
@@ -268,6 +278,17 @@ sudo pacman -Rs archcraft-openbox openbox obconf obmenu-generator
 rm -rf ~/.config/obmenu-generator
 rm -rf ~/.config/openbox
 rm -rf ~/.config/openbox-themes
+```
+
+## Extra Steps
+* **Remove pwfeedback**
+```sh
+sudo -e /etc/sudoers.d/01-pwfeedback
+```
+* **TMUX Config**
+```sh
+tmux source .config/tmux/tmux.conf
+<Prefix>+I -- to install all the plugins in tmux
 ```
 
 * **Reboot**
