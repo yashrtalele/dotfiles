@@ -288,7 +288,7 @@ sudo -e /etc/sudoers.d/01-pwfeedback
 * **TMUX Config**
 ```sh
 tmux source .config/tmux/tmux.conf
-<Prefix>+I -- to install all the plugins in tmux
+# <Prefix>+I -- to install all the plugins in tmux
 ```
 
 * **Reboot**
