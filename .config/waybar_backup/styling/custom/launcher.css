@@ -1,0 +1,71 @@
+@import "../colors-waybar.css";
+
+#custom-launcher,
+#custom-weather,
+#custom-power,
+#custom-media {
+  background-color: @background;
+}
+
+label#custom-launcher {
+  font-size: 13px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 3px;
+  margin-bottom: 9px;
+  margin-left: 8px;
+  margin-right: 8px;
+  border-radius: 13px;
+  color: @primary;
+  background-color: @background;
+}
+
+label#custom-weather {
+  font-size: 13px;
+  font-family: JetBrainsMono Nerd Font;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 3px;
+  margin-bottom: 9px;
+  margin-left: 8px;
+  margin-right: 8px;
+  border-radius: 13px;
+  color: @primary;
+  background-color: @background;
+}
+
+label#custom-media {
+  font-size: 13px;
+  font-family: JetBrainsMono Nerd Font;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 3px;
+  margin-bottom: 9px;
+  margin-left: 8px;
+  margin-right: 8px;
+  border-radius: 13px;
+  color: #ffffff;
+  background-color: @background;
+}
+
+label#custom-power {
+  font-size: 15px;
+  padding-left: 0px;
+  padding-right: 10px;
+  margin-top: 3px;
+  margin-bottom: 9px;
+  margin-left: 0px;
+  margin-right: 8px;
+  border-radius: 13px;
+  color: @on-secondary-container;
+  background-color: @transparent;
+}
+
+#tray {
+  background-color: #0a0a0a;
+  font-size: 10px;
+  padding: 2px 16px;
+  margin: 6px 0 6px 0;
+  border-radius: 13px;
+  font-weight: 600;
+}

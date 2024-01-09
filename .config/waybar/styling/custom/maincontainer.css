@@ -7,7 +7,6 @@
   color: @primary;
 }
 
-
 #battery.text,
 #backlight.text,
 #pulseaudio.text,
@@ -16,8 +15,6 @@
   font-weight: 800;
   color: @on-secondary-container;
 }
-
-
 
 label#battery,
 label#battery.text,
@@ -28,7 +25,7 @@ label#custom-pacman-update.text,
 label#pulseaudio,
 label#pulseaudio.text {
   margin-top: 3px;
-  margin-bottom: 9px;
+  margin-bottom: 20px;
   background-color: @background;
 }
 
@@ -64,7 +61,6 @@ label#pulseaudio {
 label#pulseaudio.text {
   padding-left: 3px;
   padding-right: 5px;
- 
 }
 
 label#backlight {
@@ -75,6 +71,6 @@ label#backlight {
 label#backlight.text {
   padding-left: 4px;
   padding-right: 15px;
-  border-top-right-radius: 13px;
-  border-bottom-right-radius: 13px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }

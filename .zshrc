@@ -8,7 +8,7 @@
 export VISUAL='nvim'
 export EDITOR='nvim'
 export TERMINAL='kitty'
-export BROWSER='brave'
+export BROWSER='firefox'
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 
 if [ -d "$HOME/.local/bin" ] ;
@@ -122,6 +122,8 @@ alias update="paru -Syu --nocombinedupgrade"
 
 alias vm-on="sudo systemctl start libvirtd.service"
 alias vm-off="sudo systemctl stop libvirtd.service"
+alias vpnc="(nm-applet &); protonvpn-cli c -f"
+alias vpnd="(protonvpn-cli d); pkill nm-applet"
 
 # alias music="ncmpcpp"
 
@@ -141,10 +143,18 @@ $HOME/.local/bin/colorscript -r
 
 eval "$(starship init zsh)"
 
+backward-kill-dir () {
+    local WORDCHARS=${WORDCHARS/\/}
+    zle backward-kill-word
+    zle -f kill  # Ensures that after repeated backward-kill-dir, Ctrl+Y will restore all of them.
+}
+zle -N backward-kill-dir
+
 bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
 bindkey  "^[[3~"  delete-char
 bindkey '^H' backward-kill-word
+builtin bindkey "^[^?" backward-kill-dir
 
 [ -z "$NVM_DIR"  ] && export NVM_DIR="$HOME/.nvm"
 source /usr/share/nvm/nvm.sh
@@ -152,3 +162,21 @@ source /usr/share/nvm/bash_completion
 source /usr/share/nvm/install-nvm-exec
 
 alias dots='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+
+
+alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
+alias nvim-chad="NVIM_APPNAME=NvChad nvim"
+
+function nvims() {
+  items=("default" "LazyVim" "NvChad")
+  config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
+  if [[ -z $config ]]; then
+    echo "Nothing selected"
+    return 0
+  elif [[ $config == "default" ]]; then
+    config=""
+  fi
+  NVIM_APPNAME=$config nvim $@
+}
+
+bindkey -s ^a "nvims\n"

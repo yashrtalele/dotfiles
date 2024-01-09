@@ -1,0 +1,19 @@
+[Added Associations]
+image/png=viewnior.desktop;
+image/jpeg=viewnior.desktop;
+image/gif=viewnior.desktop;
+image/svg+xml=viewnior.desktop;
+text/x-csrc=geany.desktop;
+text/plain=geany.desktop;
+application/x-shellscript=geany.desktop;org.gnome.TextEditor.desktop;
+application/x-theme=geany.desktop;
+application/json=geany.desktop;
+video/mp4=mpv.desktop;
+inode/directory=org.gnome.Nautilus.desktop;
+
+[Default Applications]
+image/gif=viewnior.desktop
+image/svg+xml=viewnior.desktop
+video/mp4=mpv.desktop
+application/x-shellscript=org.gnome.TextEditor.desktop
+inode/directory=org.gnome.Nautilus.desktop

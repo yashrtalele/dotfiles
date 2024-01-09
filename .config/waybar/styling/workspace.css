@@ -8,8 +8,8 @@
 
 box#workspaces {
   margin-top: 4px;
-  margin-bottom: 10px;
-  border-radius: 13px;
+  margin-bottom: 20px;
+  border-radius: 10px;
   background-color: @background;
 }
 

@@ -20,12 +20,12 @@ separator_height = 2
 padding = 8
 horizontal_padding = 11
 frame_width = 6
-#frame_color = "#1a1b26"
+# frame_color = "#1a1b26"
 frame_color = "#0A0A0A"
 separator_color = "#c0caf5"
 
 font = JetBrainsMono Nerd Font Medium 9
-
+# font = CaskaydiaCove Nerd Font Medium 9
 line_height = 0
 markup = full
 format = "<span size='x-large' font_desc='Cantarell 9' weight='bold' foreground='#f9f9f9'>%s</span>\n%b"

@@ -41,6 +41,6 @@ Arc-Dark Color Scheme
 }
 
 #entry:selected {
-color: black;
+    color: white;
     background-color: @highlight;
 }

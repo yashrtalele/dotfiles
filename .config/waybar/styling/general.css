@@ -3,13 +3,11 @@
 label#cpu,
 label#disk,
 label#temperature,
-label#memory
-label#network {
+label#memory label#network {
   font-size: 13px;
-
   margin-top: 3px;
-  margin-bottom: 9px;
-  border-radius: 13px;
+  margin-bottom: 20px;
+  border-radius: 10px;
   background-color: @background;
 }
 
@@ -22,9 +20,9 @@ label#network {
 #idle_inhibitor {
   font-size: 13px;
   padding: 10px 10px;
-  border-radius: 13px;
+  border-radius: 10px;
   margin-top: 3px;
-  margin-bottom: 9px;
+  margin-bottom: 20px;
   color: @on-background;
   background-color: @background;
 }

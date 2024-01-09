@@ -2,7 +2,7 @@
   "include": "~/.config/waybar/configs/custom_modules/privacy_container",
   "custom/launcher": {
     "format": " 󪤆 ",
-    "on-click": "~/.config/rofi/launchers/type-1/launcher.sh",
+    "on-click": "wofi --show drun",
     "tooltip": false
   },
   "custom/dot": {

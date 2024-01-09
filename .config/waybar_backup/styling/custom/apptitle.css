@@ -1,0 +1,40 @@
+@import "../colors-waybar.css";
+
+#custom-app-name,
+#custom-app-title-icon,
+#custom-arrow-dec {
+  background-color: @background;
+}
+
+#custom-arrow-dec {
+  margin-left: 2px;
+  margin-top: 3px;
+  margin-bottom: 9px;
+  font-size: 13px;
+  color: @green;
+  background-color: transparent;
+}
+
+#custom-app-title-icon {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 5px;
+  margin-right: 10px;
+  margin-top: 3px;
+  margin-bottom: 9px;
+  border-radius: 13px;
+  font-size: 13px;
+  color: @primary;
+}
+
+#custom-app-name {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 5px;
+  margin-right: 10px;
+  margin-top: 3px;
+  margin-bottom: 9px;
+  border-radius: 13px;
+  font-size: 13px;
+  color: @on-background;
+}

@@ -12,10 +12,10 @@ label#custom-launcher {
   padding-left: 5px;
   padding-right: 5px;
   margin-top: 3px;
-  margin-bottom: 9px;
+  margin-bottom: 20px;
   margin-left: 8px;
   margin-right: 8px;
-  border-radius: 13px;
+  border-radius: 10px;
   color: @primary;
   background-color: @background;
 }
@@ -26,10 +26,10 @@ label#custom-weather {
   padding-left: 10px;
   padding-right: 10px;
   margin-top: 3px;
-  margin-bottom: 9px;
+  margin-bottom: 20px;
   margin-left: 8px;
   margin-right: 8px;
-  border-radius: 13px;
+  border-radius: 10px;
   color: @primary;
   background-color: @background;
 }
@@ -40,10 +40,10 @@ label#custom-media {
   padding-left: 10px;
   padding-right: 10px;
   margin-top: 3px;
-  margin-bottom: 9px;
+  margin-bottom: 20px;
   margin-left: 8px;
   margin-right: 8px;
-  border-radius: 13px;
+  border-radius: 10px;
   color: #ffffff;
   background-color: @background;
 }
@@ -53,10 +53,10 @@ label#custom-power {
   padding-left: 0px;
   padding-right: 10px;
   margin-top: 3px;
-  margin-bottom: 9px;
+  margin-bottom: 20px;
   margin-left: 0px;
   margin-right: 8px;
-  border-radius: 13px;
+  border-radius: 10px;
   color: @on-secondary-container;
   background-color: @transparent;
 }
@@ -65,7 +65,7 @@ label#custom-power {
   background-color: #0a0a0a;
   font-size: 10px;
   padding: 2px 16px;
-  margin: 6px 0 6px 0;
-  border-radius: 13px;
+  margin: 3px 0 20px 0;
+  border-radius: 10px;
   font-weight: 600;
 }

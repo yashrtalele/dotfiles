@@ -1,0 +1,114 @@
+configuration {
+    show-icons: true;
+    icon-theme: "WhiteSur-dark";
+    display-run: ">_";
+}
+
+* {
+    color0: #33333f;
+    color1: #ff568e;
+    color2: #64de83;
+    color3: #efff73;
+    color4: #73a9ff;
+    color5: #946ff7;
+    color6: #62c6da;
+    color7: #dedeef;
+
+    bg: #101017f0;
+    bg-alt: #1f222e;
+    fg: #bdc3c7; 
+    font: "JetBrainsMono Nerd Font Bold 10";
+    color: @fg;
+    background-color: transparent;
+    highlight: underline bold #ff568e;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+window {
+    width: 550px;
+    children: [ mainbox];
+    location: center;
+    transparency: "real";
+    background-color: @bg;
+    border-radius: 10px;
+}
+
+mainbox {
+    orientation: vertical;
+    children: [ inputbar, message, listview, mode-switcher];
+    border: 1px;
+    border-color: @color0;
+}
+
+inputbar {
+    padding: 3em;
+    background-image: url("~/.config/bspwm/rices/emilia/images/header-1.jpg", width);
+    children: [prompt,entry];
+    spacing: -1px;
+}
+
+prompt {
+    background-color: @color1;
+    padding: 15px;
+    text-color: @bg;
+    border-radius: 50% 0 0 50%;
+}
+
+entry {
+    padding: 15px 30px 15px 15px;
+    border: 0px;
+    border-radius: 0 100% 100% 0;
+    background-color: @bg;
+    text-color: @fg;
+}
+
+message {
+    padding: 0 0 1em 0;
+}
+
+textbox {
+    background-color: @color1;
+    padding: 0 1.5em;
+}
+
+listview {
+    margin: 0.5em 0 0 0;
+    lines: 6;
+    spacing: 15px;
+}
+
+element {
+    padding: 0.5em;
+    color: @fg;
+}
+
+element selected.normal {
+    background-color: @bg-alt;
+}
+
+element-icon {
+    size: 30px;
+    padding: 0 0.5em 0 1em;
+}
+
+element-text {
+  vertical-align: 0.5;
+  horizontal-align: 0.0;
+}
+
+mode-switcher {
+    padding: 0 1em;
+}
+
+button {
+    margin: 0.3em 0 0.5em;
+    padding: 0.3em;
+    border-radius: 50%;
+}
+
+button selected {
+    background-color: @color5;
+    text-color: @color0;
+}

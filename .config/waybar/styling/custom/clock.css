@@ -4,10 +4,10 @@ label#clock {
   font-size: 13px;
   color: @on-background;
   margin-top: 3px;
-  margin-bottom: 9px;
+  margin-bottom: 20px;
   margin-right: 15px;
   padding-left: 10px;
   padding-right: 10px;
-  border-radius: 13px;
+  border-radius: 10px;
   background-color: @background;
 }
