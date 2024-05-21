@@ -224,8 +224,8 @@ sudo cp wofi-emoji /usr/bin/
 
 ### Git ssh setup
 ```sh
-ssh-keygen -t rsa -b 4096 -C "yashrtalele@gmail.com"
-git config --global user.email "yashrtalele@gmail.com"
+ssh-keygen -t rsa -b 4096 -C "your-email@email.com"
+git config --global user.email "your-email@email.com"
 git config --global user.name "Yash"
 eval "$(ssh-agent -s)"
 ssh-add .ssh/id_rsa
