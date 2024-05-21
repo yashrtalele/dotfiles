@@ -295,3 +295,6 @@ tmux source .config/tmux/tmux.conf
 ```sh
 reboot
 ```
+
+## Credits
+- Original bspwm rice by gh0stzk - https://github.com/gh0stzk/dotfiles.git
